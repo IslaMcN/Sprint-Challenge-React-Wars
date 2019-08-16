@@ -34,6 +34,8 @@ Basically it means "how are you going to build this project knowing that you are
 
 - [ ] Describe state.
 
+A state is an object that determines how a components renders and behaves. It allows us to create components that are dynamic and interactive.
+
 - [ ] Describe props.
 
  We use props to send data to components. Props are equivalent to parameters of a pure JavaScript function. They are immutable because they are developed in the concept of pure functions. In pure functions we cannot change the data of parameters. 
