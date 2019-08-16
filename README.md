@@ -30,6 +30,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What does it mean to _think_ in react?
 
+Basically it means "how are you going to build this project knowing that you are going to use react?" First you start with a mockup, then you break the UI into a component hierarchy. Then you build a static version in React. After than you identify where your state should live. Then lastly, you add inverse data flow.
+
 - [ ] Describe state.
 
 - [ ] Describe props.
@@ -37,6 +39,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
  We use props to send data to components. Props are equivalent to parameters of a pure JavaScript function. They are immutable because they are developed in the concept of pure functions. In pure functions we cannot change the data of parameters. 
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect is anything that affects something outside the scope of the function it is being executed in. Such as fetching data, timers, logging, and manually manipulating the DOM. In order to sync effects in a React component you need to use an effect hook. useEffect().
 
 ## Project Set Up
 
