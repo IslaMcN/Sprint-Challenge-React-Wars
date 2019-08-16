@@ -3,6 +3,11 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard.js';
+import styled from "styled-components";
+
+const StyledCard = styled.div`
+  display:flex;
+  flex-wrap: wrap;`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -18,7 +23,7 @@ const App = () => {
       .then(response => {
         console.log(response)
         const peopleResults = response.data.results;
-
+        
         setPeople(peopleResults);
       });
 
@@ -27,17 +32,18 @@ const App = () => {
   }, []);
 
   return (
-    
-      <div>
+    <div>
+      <h1>React Wars</h1>
+      <StyledCard>
         {people.map((arr) => {
-          return
-          <CharacterCard
+          return(
+          <CharacterCard 
             key={arr.name}
             name={arr.name}
-            birthYear={arr.birth_year} />
+            birthYear={arr.birth_year} />);
         })}
+      </StyledCard>
       </div>
-    
   );
 }
 
